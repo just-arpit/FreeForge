@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>FreeForge</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<header class="top-bar">
+		<h1>FreeForge</h1>
+		<button id="themeToggle" class="theme-btn">Dark Mode</button>
+	</header>
+
+	<main class="container">
+		<section class="controls">
+			<input id="searchInput" type="text" placeholder="Search by title..." />
+
+			<select id="genreFilter">
+				<option value="all">All Genres</option>
+			</select>
+
+			<select id="platformFilter">
+				<option value="all">All Platforms</option>
+				<option value="pc">PC</option>
+				<option value="browser">Browser</option>
+			</select>
+
+			<select id="sortSelect">
+				<option value="">Sort By</option>
+				<option value="date">Latest Release Date</option>
+				<option value="title">Alphabetical (A-Z)</option>
+			</select>
+
+			<label class="favorite-only-label">
+				<input type="checkbox" id="favoriteOnlyToggle" />
+				Show Favorites Only
+			</label>
+		</section>
+
+		<p id="resultCount" class="result-count">Showing 0 games</p>
+
+		<div id="loader" class="loader hidden">Loading games...</div>
+		<div id="errorBox" class="error hidden"></div>
+		<button id="retryBtn" class="retry-btn hidden">Retry</button>
+
+		<section id="gamesContainer" class="games-grid"></section>
+	</main>
+</body>
+</html>
